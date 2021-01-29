@@ -1,0 +1,32 @@
+{
+  "name": "tailwindcss-box-shadow",
+  "description": "Tailwind CSS plugin that generates standard box-shadow utilities, without CSS variables.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Cosmin Popovici (https://github.com/cossssmin)",
+  "bugs": "https://github.com/cossssmin/tailwindcss-box-shadow/issues",
+  "homepage": "https://github.com/cossssmin/tailwindcss-box-shadow",
+  "repository": "cossssmin/tailwindcss-box-shadow",
+  "main": "lib",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "test": "nyc ava",
+    "pretest": "xo",
+    "release": "np"
+  },
+  "keywords": [
+    "box-shadow",
+    "postcss",
+    "tailwindcss"
+  ],
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "np": "^7.2.0",
+    "nyc": "^15.1.0",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2",
+    "xo": "^0.37.1"
+  }
+}
