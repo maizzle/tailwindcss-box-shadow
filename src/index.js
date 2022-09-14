@@ -8,7 +8,9 @@ const boxShadow = plugin(
           boxShadow: value
         }),
       },
-      { values: theme('boxShadow') }
+      {
+        values: theme('boxShadow')
+      }
     )
   },
   {
