@@ -16,6 +16,7 @@ const boxShadow = plugin(
   {
     corePlugins: {
       boxShadow: false,
+      boxShadowColor: false,
     }
   }
 )
