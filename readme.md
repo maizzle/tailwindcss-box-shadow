@@ -34,8 +34,8 @@ module.exports = {
 Use the `shadow-{n}` utilities to add box shadows to elements:
 
 ```html
-<div class="shadow-xl">
-  Fugiat id id enim commodo.
+<div class="shadow-2xl">
+  Box with big ass shadow
 </div>
 ```
 
@@ -70,9 +70,9 @@ module.exports = {
 
 [npm]: https://www.npmjs.com/package/tailwindcss-box-shadow
 [npm-stats]: https://npm-stat.com/charts.html?package=tailwindcss-box-shadow&from=2021-01-29
-[npm-version-shield]: https://img.shields.io/npm/v/tailwindcss-box-shadow.svg?style=flat-square
-[npm-stats-shield]: https://img.shields.io/npm/dt/tailwindcss-box-shadow.svg?style=flat-square&color=6875f5
+[npm-version-shield]: https://img.shields.io/npm/v/tailwindcss-box-shadow.svg
+[npm-stats-shield]: https://img.shields.io/npm/dt/tailwindcss-box-shadow.svg?color=6875f5
 [github-ci]: https://github.com/maizzle/tailwindcss-box-shadow/actions
-[github-ci-shield]: https://img.shields.io/github/workflow/status/maizzle/tailwindcss-box-shadow/Node.js%20CI?style=flat-square
+[github-ci-shield]: https://github.com/maizzle/tailwindcss-box-shadow/actions/workflows/nodejs.yml/badge.svg
 [license]: ./LICENSE
-[license-shield]: https://img.shields.io/npm/l/tailwindcss-box-shadow.svg?style=flat-square&color=0e9f6e
+[license-shield]: https://img.shields.io/npm/l/tailwindcss-box-shadow.svg?style=color=0e9f6e
