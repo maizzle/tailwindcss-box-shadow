@@ -1,16 +1,39 @@
-/* eslint-env jest */
-const path = require('path')
-const postcss = require('postcss')
-const tailwindcss = require('tailwindcss')
-const boxShadowPlugin = require('./index.js')
+import path from 'path'
+import postcss from 'postcss'
+import boxShadowPlugin from '.'
+import { expect, test } from 'vitest'
+import tailwindcss from 'tailwindcss'
 
+// Custom CSS matcher
+expect.extend({
+  // Compare two CSS strings with all whitespace removed
+  // This is probably naive but it's fast and works well enough.
+  toMatchCss(received, argument) {
+    function stripped(string_) {
+      return string_.replaceAll(/\s/g, '').replaceAll(';', '')
+    }
+
+    const pass = stripped(received) === stripped(argument)
+
+    return {
+      pass,
+      actual: received,
+      expected: argument,
+      message: () => pass ? 'All good!' : 'CSS does not match',
+    }
+  }
+})
+
+// Function to run the plugin
 function run(config, css = '@tailwind utilities', plugin = tailwindcss) {
-  const {currentTestName} = expect.getState()
+  let { currentTestName } = expect.getState()
 
   config = {
-    plugins: [boxShadowPlugin],
-    corePlugins: {
-      preflight: false,
+    ...{
+      plugins: [boxShadowPlugin],
+      corePlugins: {
+        preflight: false,
+      }
     },
     ...config,
   }
@@ -20,7 +43,7 @@ function run(config, css = '@tailwind utilities', plugin = tailwindcss) {
   })
 }
 
-it('uses shadow values from config as-is', () => {
+test('uses shadow values from config as-is', () => {
   const config = {
     content: [{
       raw: String.raw`
@@ -38,7 +61,7 @@ it('uses shadow values from config as-is', () => {
   })
 })
 
-it('arbitrary values', () => {
+test('arbitrary values', () => {
   const config = {
     content: [{
       raw: String.raw`
