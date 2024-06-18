@@ -1,22 +1,23 @@
-# tailwindcss-box-shadow
+<div align="center">
+  <img src="./.github/tailwindcss-mark.svg" alt="Tailwind CSS" width="108" height="66">
+  <h1>Tailwind CSS Box Shadow</h1>
+  <p>Generate box-shadow utilities without CSS variables</p>
 
-[![Version][npm-version-shield]][npm]
-[![Build][github-ci-shield]][github-ci]
-[![Downloads][npm-stats-shield]][npm-stats]
-[![License][license-shield]][license]
+  [![Version][npm-version-shield]][npm]
+  [![Build][github-ci-shield]][github-ci]
+  [![Downloads][npm-stats-shield]][npm-stats]
+  [![License][license-shield]][license]
+</div>
 
-A plugin that generates `shadow` utilities exactly as they are defined in the config - that is, without CSS variables.
+
+This is a Tailwind CSS plugin that generates `shadow` utilities exactly as they are defined in the config - that is, without CSS variables.
 
 ## Installation
 
-Install the plugin from npm:
+Install the plugin from NPM:
 
 ```sh
-# Using npm
-npm install tailwindcss-box-shadow
-
-# Using Yarn
-yarn add tailwindcss-box-shadow
+npm install -D tailwindcss-box-shadow
 ```
 
 Then add the plugin to your `tailwind.config.js`:
@@ -67,6 +68,13 @@ module.exports = {
   },
 }
 ```
+
+## Core plugins
+
+In order to work, the plugin disables the following core Tailwind CSS plugins:
+
+- boxShadow
+- boxShadowColor
 
 [npm]: https://www.npmjs.com/package/tailwindcss-box-shadow
 [npm-stats]: https://npm-stat.com/charts.html?package=tailwindcss-box-shadow&from=2021-01-29
