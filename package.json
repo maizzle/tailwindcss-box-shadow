@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/maizzle/tailwindcss-box-shadow/issues"
   },
+  "files": [
+    "src/index.js"
+  ],
   "devDependencies": {
     "@vitest/coverage-v8": "^1.6.0",
     "np": "*",
