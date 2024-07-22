@@ -9,6 +9,13 @@
   [![License][license-shield]][license]
 </div>
 
+## Deprecation notice
+
+This plugin has been archived and is no longer maintained. 
+
+Use [`tailwindcss-preset-email`](https://github.com/maizzle/tailwindcss-preset-email/tree/main) instead, which includes this plugin and others, and is actively maintained.
+
+---
 
 This is a Tailwind CSS plugin that generates `shadow` utilities exactly as they are defined in the config - that is, without CSS variables.
 
